@@ -1,0 +1,99 @@
+.blog {
+  .heading {
+    h3 {
+      font-size: 48px;
+      line-height: 40px;
+      color: $black-color;
+      font-weight: 700;
+    }
+    p {
+      padding-top: 24px;
+      font-size: 18px;
+      line-height: 30px;
+      color: $text-color;
+      font-weight: 400;
+    }
+  }
+  .slider-main {
+    position: relative;
+    .blog-inner {
+      margin: 40px 15px;
+      padding: 22px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      img {
+        width: 100%;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $date-color;
+        padding-top: 22px;
+        svg {
+          margin-right: 8px;
+        }
+      }
+      h3 {
+        a {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 36px;
+          color: #121112;
+          margin: 16px 0 26px 0;
+          width: 70%;
+          text-decoration: none !important;
+        }
+      }
+      a {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        color: #414141;
+        text-decoration: underline !important;
+      }
+      transition: 0.5s;
+      &:hover {
+        border: 1px solid transparent;
+        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+    .prev-arrow {
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      z-index: 1;
+      svg {
+        font-size: 30px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .next-arrow {
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      z-index: 1;
+      svg {
+        font-size: 30px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.company {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  .company-heading {
+    padding-bottom: 40px;
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #414141;
+      line-height: 40px;
+    }
+  }
+  .company-slider{
+    text-align: center;
+    .company-inner{
+      margin: 0 20px;
+      display: inline-block;
+      border: 1px solid #D8D2EC;
+      min-height: 210px;
+      line-height: 210px;
+      min-width: 278px;
+      text-align: center;
+    }
+  }
+}
+
+.slick-slide img{
+  display: inherit !important;
+}

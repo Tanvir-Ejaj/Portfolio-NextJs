@@ -1,0 +1,104 @@
+.experience {
+  padding-bottom: 120px;
+  .exp-pic {
+    img {
+      width: 100%;
+    }
+    position: relative;
+    .exp-img-text {
+      display: inline-block;
+      background: $blue-color;
+      padding: 43px 65px;
+      border: 15px solid $white-color;
+      position: absolute;
+      bottom: 70px;
+      right: 30px;
+      transform: translate(50%, 50%);
+      -webkit-transform: translate(50%, 50%);
+      -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+      -o-transform: translate(50%, 50%);
+      border-top-right-radius: 100px;
+      h3 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        color: $white-color;
+        line-height: 60px;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        color: $white-color;
+        line-height: 30px;
+      }
+    }
+  }
+  .exp-right {
+    h3 {
+      font-size: 42px;
+      font-weight: 700;
+      color: $black-color;
+      line-height: 60px;
+      span {
+        color: $blue-color;
+      }
+    }
+    p {
+      padding-top: 24px;
+      font-size: 18px;
+      font-weight: 400;
+      color: $text-color;
+      line-height: 30px;
+    }
+    .exp-data {
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 26px;
+          color: $text-color;
+          padding: 8px 0;
+          svg {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    button {
+      padding: 18px 32px;
+      border: 1px solid $blue-color;
+      color: $blue-color;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      background: transparent;
+      outline: 0;
+      margin-top: 40px;
+    }
+    .counter {
+      padding-top: 40px;
+      .counter-inner {
+        h3 {
+          font-size: 48px;
+          font-weight: 700;
+          color: $black-color;
+          line-height: 30px;
+        }
+        p {
+          padding-top: 11px;
+          font-size: 18px;
+          font-weight: 400;
+          color: $text-color;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
