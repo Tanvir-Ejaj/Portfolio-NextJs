@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import { DM_Sans } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -22,9 +23,30 @@ const Company = () => {
     autoplay: true,
   };
 
+  const Animation = {
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <>
-      <div className="company">
+      <motion.div className="company" initial="hidden"
+        whileInView="visible"
+        variants={Animation}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          staggerChildren: 0.2,
+          duration: 0.2,
+          ease: "easeInOut",
+        }}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 text-center">
@@ -43,7 +65,7 @@ const Company = () => {
             ))}
           </Slider>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

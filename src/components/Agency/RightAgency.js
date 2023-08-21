@@ -12,9 +12,33 @@ const DmSans = DM_Sans({
 });
 
 const RightAgency = () => {
+  const Animation = {
+    hidden: {
+      x: 30,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <>
-      <div className="right-agency">
+      <motion.div
+        className="right-agency"
+        initial="hidden"
+        whileInView="visible"
+        variants={Animation}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          staggerChildren: 0.2,
+          duration: 0.2,
+          ease: "easeInOut",
+        }}
+      >
         <motion.div
           whileHover={{ marginLeft: 50 }}
           className="right-agency-inner d-flex"
@@ -66,7 +90,7 @@ const RightAgency = () => {
             </p>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { DM_Sans, Open_Sans } from "next/font/google";
+import { motion } from "framer-motion";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -13,9 +15,33 @@ const OpenSans = Open_Sans({
 });
 
 const Subscribe = () => {
+  const Animation = {
+    hidden: {
+      y: 10,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <>
-      <div className="subscribe">
+      <motion.div
+        className="subscribe"
+        initial="hidden"
+        whileInView="visible"
+        variants={Animation}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          staggerChildren: 0.2,
+          duration: 0.2,
+          ease: "easeInOut",
+        }}
+      >
         <div className="container">
           <div className="subscribe-inner">
             <div className="row justify-content-between align-items-center">
@@ -37,15 +63,21 @@ const Subscribe = () => {
                     type="text"
                     placeholder="Email"
                   />
-                  <button>
+                  <motion.button
+                    whileHover={{
+                      scale: 0.9,
+                      transition: { duration: 0.5 },
+                    }}
+                    whileTap={{ scale: 0.8 }}
+                  >
                     <BsArrowRight />
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

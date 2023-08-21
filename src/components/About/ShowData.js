@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -28,7 +29,15 @@ const ShowData = ({ title, para, btn }) => {
     >
       <h3>{title}</h3>
       <p>{para}</p>
-      <button>{btn}</button>
+      <motion.button
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.5 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {btn}
+      </motion.button>
     </motion.div>
   );
 };

@@ -4,6 +4,7 @@ import { DM_Sans, Grechen_Fuemen, Open_Sans } from "next/font/google";
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -44,7 +45,16 @@ const ExpRight = () => {
             </>
           ))}
         </div>
-        <button className={OpenSans.className}>Explore More</button>
+        <motion.button
+          className={OpenSans.className}
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.5 },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Explore More
+        </motion.button>
         <div className="counter">
           <div className="row text-center">
             <div className="col-lg-4">
@@ -56,6 +66,7 @@ const ExpRight = () => {
                   preserveValue={30}
                   suffix="+"
                   enableScrollSpy={true}
+                  scrollSpyOnce={true}
                 >
                   {({ countUpRef }) => (
                     <h3 className={Grechen.className} ref={countUpRef}></h3>
@@ -72,6 +83,7 @@ const ExpRight = () => {
                   delay={0}
                   preserveValue={150}
                   enableScrollSpy={true}
+                  scrollSpyOnce={true}
                 >
                   {({ countUpRef }) => (
                     <h3 className={Grechen.className} ref={countUpRef}></h3>
@@ -89,6 +101,7 @@ const ExpRight = () => {
                   preserveValue={50}
                   suffix="+"
                   enableScrollSpy={true}
+                  scrollSpyOnce={true}
                 >
                   {({ countUpRef }) => (
                     <h3 className={Grechen.className} ref={countUpRef}></h3>

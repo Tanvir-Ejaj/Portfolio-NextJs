@@ -7,7 +7,8 @@ import Link from "next/link";
 import { DM_Sans } from "next/font/google";
 import PrevArrow from "../Arrows/PrevArrow";
 import NextArrow from "../Arrows/NextArrow";
-import { SlCalender } from 'react-icons/sl';
+import { SlCalender } from "react-icons/sl";
+import { motion } from "framer-motion";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -25,12 +26,37 @@ const BlogSlider = () => {
     prevArrow: <PrevArrow />,
     autoplay: true,
   };
+
+  const Animation = {
+    hidden: {
+      y: 10,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <>
       <Slider className="slider-main" {...settings}>
         {BlogData.map((data, i) => (
           <>
-            <div className="blog-inner">
+            <motion.div
+              className="blog-inner"
+              initial="hidden"
+              whileInView="visible"
+              variants={Animation}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                staggerChildren: 0.2,
+                duration: 0.2,
+                ease: "easeInOut",
+              }}
+            >
               <Image
                 src={data.photo}
                 alt="aa"
@@ -38,14 +64,16 @@ const BlogSlider = () => {
                 width={320}
                 loading="lazy"
               />
-              <p className={DmSans.className}><SlCalender /> {data.date}</p>
+              <p className={DmSans.className}>
+                <SlCalender /> {data.date}
+              </p>
               <h3 className={DmSans.className}>
                 <Link href={data.url}>{data.heading}</Link>
               </h3>
               <Link className={DmSans.className} href={data.url}>
                 {data.btn}
               </Link>
-            </div>
+            </motion.div>
           </>
         ))}
       </Slider>
