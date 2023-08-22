@@ -93,7 +93,7 @@ const About = () => {
                   <div className="row">
                     {AboutData.map((data, i) => (
                       <>
-                        <div className="col-lg-6 mb-4">
+                        <div className="col-lg-6 col-sm-6 mb-4">
                           <div
                             className={
                               active === i

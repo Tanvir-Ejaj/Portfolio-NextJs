@@ -1,6 +1,6 @@
 .agency {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   .left-agency {
     h3 {
       padding-right: 100px;
@@ -8,6 +8,11 @@
       font-weight: 700;
       line-height: 60px;
       color: $black-color;
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        font-size: 30px;
+        line-height: 45px;
+      }
       span {
         color: $blue-color;
       }
@@ -19,6 +24,12 @@
       color: $text-color;
       line-height: 30px;
       padding-right: 100px;
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        font-size: 16px;
+        line-height: 45px;
+        line-height: 25px;
+      }
     }
     button {
       padding: 16px 30px;
@@ -34,9 +45,17 @@
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
       margin-top: 40px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        padding: 13px 27px;
+        margin-top: 30px;
+      }
     }
   }
   .right-agency {
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
     .right-agency-inner {
       width: 95%;
       padding: 24px 15px 24px 24px;
@@ -47,10 +66,18 @@
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
       align-items: center;
-      &:nth-child(2){
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        padding: 20px 15px;
+        width: 100%;
+      }
+      &:nth-child(2) {
         margin: 24px 0;
       }
       .agency-inner-left {
+        @include media-breakpoint-down(sm){
+          margin: 20px 0;
+        }
         .agency-icon {
           height: 64px;
           width: 64px;
@@ -69,11 +96,18 @@
       }
       .agency-inner-right {
         margin-left: 24px;
+        @include media-breakpoint-down(sm){
+          margin-left: 0;
+          text-align: center;
+        }
         h3 {
           font-size: 24px;
           font-weight: 700;
           line-height: 30px;
           color: $black-color;
+          @include media-breakpoint-down(sm){
+            font-size: 22px;
+          }
         }
         p {
           font-size: 18px;
@@ -81,6 +115,10 @@
           line-height: 30px;
           color: $text-color;
           margin-right: 50px;
+          @include media-breakpoint-down(sm){
+            margin-right: 0;
+            font-size: 16px;
+          }
         }
       }
     }

@@ -7,14 +7,24 @@
       line-height: 90px;
       color: $black-color;
       font-weight: 700;
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
+        line-height: 60px;
+      }
       span {
         &:first-child {
           color: $white-color;
           background: $blue-color;
           padding: 0 16px;
+          @include media-breakpoint-down(md) {
+            padding: 0 5px;
+          }
         }
         &:nth-child(2) {
           margin-left: 20px;
+          @include media-breakpoint-down(md) {
+            margin-left: 5px;
+          }
         }
         &:last-child {
           color: $blue-color;
@@ -28,6 +38,9 @@
       width: 65%;
       font-weight: 400;
       color: $text-color;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
     }
     .hero-btn {
       margin-top: 40px;
@@ -44,6 +57,10 @@
         outline: 0;
         background: $blue-color;
         color: $white-color;
+        @include media-breakpoint-down(md) {
+          padding: 12px 25px;
+          font-size: 17px;
+        }
         &:last-child {
           margin-left: 10px;
           background: transparent;
@@ -56,9 +73,16 @@
           -moz-transition: 0.5s;
           -ms-transition: 0.5s;
           -o-transition: 0.5s;
+          @include media-breakpoint-down(md) {
+            padding: 12px 25px;
+            font-size: 17px;
+          }
           svg {
             padding-left: 5px;
             font-size: 25px;
+            @include media-breakpoint-down(md) {
+              font-size: 17px;
+            }
           }
           &:hover {
             background: $blue-color;

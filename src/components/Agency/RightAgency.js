@@ -39,10 +39,7 @@ const RightAgency = () => {
           ease: "easeInOut",
         }}
       >
-        <motion.div
-          whileHover={{ marginLeft: 50 }}
-          className="right-agency-inner d-flex"
-        >
+        <motion.div className="right-agency-inner d-flex">
           <div className="agency-inner-left">
             <div className="agency-icon">
               <Agency1icon />
@@ -56,10 +53,7 @@ const RightAgency = () => {
             </p>
           </div>
         </motion.div>
-        <motion.div
-          whileHover={{ marginLeft: 50 }}
-          className="right-agency-inner d-flex"
-        >
+        <motion.div className="right-agency-inner d-flex">
           <div className="agency-inner-left">
             <div className="agency-icon">
               <Agency2icon />
@@ -73,10 +67,7 @@ const RightAgency = () => {
             </p>
           </div>
         </motion.div>
-        <motion.div
-          whileHover={{ marginLeft: 50 }}
-          className="right-agency-inner d-flex"
-        >
+        <motion.div className="right-agency-inner d-flex">
           <div className="agency-inner-left">
             <div className="agency-icon">
               <Agency3icon />
