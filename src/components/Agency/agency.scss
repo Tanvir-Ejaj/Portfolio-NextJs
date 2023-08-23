@@ -56,6 +56,9 @@
     @include media-breakpoint-down(md) {
       margin-top: 40px;
     }
+    @include media-breakpoint-between(md , lg) {
+      margin-top: 40px;
+    }
     .right-agency-inner {
       width: 95%;
       padding: 24px 15px 24px 24px;

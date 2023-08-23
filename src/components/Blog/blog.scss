@@ -71,6 +71,10 @@
             width: 100%;
             font-size: 16px;
           }
+          @include media-breakpoint-between(md , lg) {
+            font-size: 20px;
+            width: 100%;
+          }
         }
       }
       a {

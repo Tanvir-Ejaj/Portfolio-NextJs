@@ -1,8 +1,11 @@
 .company {
   margin-top: 100px;
   margin-bottom: 120px;
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     margin: 50px 0 70px 0;
+  }
+  @include media-breakpoint-between(md, lg) {
+    margin: 70px 0 90px 0;
   }
   .company-heading {
     padding-bottom: 40px;
@@ -11,31 +14,31 @@
       font-weight: 700;
       color: #414141;
       line-height: 40px;
-      @include media-breakpoint-between(zero,sm){
+      @include media-breakpoint-between(zero, sm) {
         font-size: 30px;
       }
     }
   }
-  .company-slider{
+  .company-slider {
     text-align: center;
-    .company-inner{
+    .company-inner {
       margin: 0 20px;
       display: inline-block;
-      border: 1px solid #D8D2EC;
+      border: 1px solid #d8d2ec;
       min-height: 210px;
       line-height: 210px;
       // min-width: 278px;
       text-align: center;
-      @include media-breakpoint-between(zero, sm){
+      @include media-breakpoint-between(zero, sm) {
         margin: 0 auto;
       }
-      @include media-breakpoint-between(sm, md){
+      @include media-breakpoint-between(sm, md) {
         margin: 0 auto;
       }
     }
   }
 }
 
-.slick-slide img{
+.slick-slide img {
   display: inherit !important;
 }

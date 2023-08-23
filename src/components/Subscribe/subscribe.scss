@@ -48,6 +48,9 @@
       @include media-breakpoint-down(md){
         margin-top: 40px;
       }
+      @include media-breakpoint-between(md , lg){
+        margin-top: 40px;
+      }
       input {
         padding: 10px 18px;
         width: 75%;
