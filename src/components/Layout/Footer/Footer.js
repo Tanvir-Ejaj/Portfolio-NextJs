@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="footer-main">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-sm-6 col-lg-3">
               <Link href="/">
                 <Logo />
               </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                 majority have suffered.
               </p>
             </div>
-            <div className="col-lg-3">
+            <div className="col-sm-6 col-lg-3">
               <div className="footer-content">
                 <h3 className={DmSans.className}>Service</h3>
                 {ServiceData.map((data, i) => (
@@ -47,7 +47,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-sm-6 col-lg-3 mt-4 mt-lg-0">
               <div className="footer-content">
                 <h3 className={DmSans.className}>Resource</h3>
                 {ResourceData.map((data, i) => (
@@ -57,7 +57,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-sm-6 col-lg-3 mt-4 mt-lg-0">
               <div className="footer-content">
                 <h3>Newsletter</h3>
                 <p className={OpenSans.className + " "}>

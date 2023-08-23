@@ -57,7 +57,7 @@ const ExpRight = () => {
         </motion.button>
         <div className="counter">
           <div className="row text-center">
-            <div className="col-lg-4">
+            <div className="col-sm-4 col-lg-4">
               <div className="counter-inner">
                 <CountUp
                   start={1}
@@ -75,7 +75,7 @@ const ExpRight = () => {
                 <p className={DmSans.className}>Team Members</p>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-sm-4 col-lg-4">
               <div className="counter-inner">
                 <CountUp
                   start={1}
@@ -92,7 +92,7 @@ const ExpRight = () => {
                 <p className={DmSans.className}>Completed Projects</p>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-sm-4 col-lg-4">
               <div className="counter-inner">
                 <CountUp
                   start={1}

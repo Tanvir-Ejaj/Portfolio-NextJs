@@ -6,6 +6,9 @@
     color: #717171;
     font-size: 18px;
     line-height: 30px;
+    @include media-breakpoint-down(md){
+      padding-top: 30px;
+    }
   }
   .footer-content {
     h3 {
@@ -14,6 +17,9 @@
       line-height: 20px;
       padding-bottom: 53px;
       font-weight: 700;
+      @include media-breakpoint-down(md){
+        padding-bottom: 30px;
+      }
     }
     a {
       display: block;
@@ -51,6 +57,9 @@
       background: transparent;
       outline: none;
       border: 0;
+      @include media-breakpoint-between(sm , md){
+        width: 60%;
+      }
     }
     button {
       padding: 15px 18px;
@@ -60,6 +69,9 @@
       color: $white-color;
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
+      @include media-breakpoint-between(sm , md){
+        width: 20%;
+      }
     }
   }
   .contact-icons {

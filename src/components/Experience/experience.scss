@@ -1,16 +1,19 @@
 .experience {
-  padding-bottom: 120px;
   .exp-pic {
+    position: relative;
     img {
       width: 100%;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        height: auto;
+      }
     }
-    position: relative;
     .exp-img-text {
+      position: absolute;
       display: inline-block;
       background: $blue-color;
       padding: 43px 65px;
       border: 15px solid $white-color;
-      position: absolute;
       bottom: 70px;
       right: 30px;
       transform: translate(50%, 50%);
@@ -19,6 +22,22 @@
       -ms-transform: translate(50%, 50%);
       -o-transform: translate(50%, 50%);
       border-top-right-radius: 100px;
+      @include media-breakpoint-down(md) {
+        position: static;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+      }
       h3 {
         text-align: center;
         font-size: 42px;
@@ -35,11 +54,18 @@
     }
   }
   .exp-right {
+    @include media-breakpoint-down(md){
+      margin-top: 40px;
+    }
     h3 {
       font-size: 42px;
       font-weight: 700;
       color: $black-color;
       line-height: 60px;
+      @include media-breakpoint-down(md) {
+        font-size: 35px;
+        line-height: 45px;
+      }
       span {
         color: $blue-color;
       }
@@ -50,8 +76,14 @@
       font-weight: 400;
       color: $text-color;
       line-height: 30px;
+      @include media-breakpoint-down(md) {
+        font-size: 17px;
+      }
     }
     .exp-data {
+      @include media-breakpoint-down(md) {
+        margin-top: 30px;
+      }
       ul {
         margin: 0;
         padding: 0;
@@ -61,8 +93,19 @@
           line-height: 26px;
           color: $text-color;
           padding: 8px 0;
+          @include media-breakpoint-between(zero, sm) {
+            font-size: 13px;
+            padding: 5px 0;
+          }
+          @include media-breakpoint-between(sm, md) {
+            font-size: 18px;
+            padding: 5px 0;
+          }
           svg {
             margin-right: 16px;
+            @include media-breakpoint-between(zero, sm) {
+              margin-right: 10px;
+            }
           }
         }
       }
@@ -81,15 +124,33 @@
       background: transparent;
       outline: 0;
       margin-top: 40px;
+      @include media-breakpoint-between(zero, sm) {
+        font-size: 15px;
+        padding: 13px 25px;
+        margin-top: 20px;
+      }
+      @include media-breakpoint-between(sm , md) {
+        font-size: 17px;
+        padding: 15px 28px;
+      }
     }
     .counter {
-      padding-top: 40px;
+      margin-top: 40px;
+      @include media-breakpoint-down(md){
+        margin-top: 50px;
+      }
       .counter-inner {
+        @include media-breakpoint-between(zero , sm){
+          margin: 20px 0;
+        }
         h3 {
           font-size: 48px;
           font-weight: 700;
           color: $black-color;
           line-height: 30px;
+          @include media-breakpoint-down(md){
+            font-size: 45px;
+          }
         }
         p {
           padding-top: 11px;
@@ -97,6 +158,9 @@
           font-weight: 400;
           color: $text-color;
           line-height: 30px;
+          @include media-breakpoint-down(md){
+            font-size: 15px;
+          }
         }
       }
     }

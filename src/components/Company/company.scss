@@ -1,6 +1,9 @@
 .company {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  @include media-breakpoint-down(md){
+    margin: 50px 0 70px 0;
+  }
   .company-heading {
     padding-bottom: 40px;
     h3 {
@@ -8,6 +11,9 @@
       font-weight: 700;
       color: #414141;
       line-height: 40px;
+      @include media-breakpoint-between(zero,sm){
+        font-size: 30px;
+      }
     }
   }
   .company-slider{
@@ -18,8 +24,14 @@
       border: 1px solid #D8D2EC;
       min-height: 210px;
       line-height: 210px;
-      min-width: 278px;
+      // min-width: 278px;
       text-align: center;
+      @include media-breakpoint-between(zero, sm){
+        margin: 0 auto;
+      }
+      @include media-breakpoint-between(sm, md){
+        margin: 0 auto;
+      }
     }
   }
 }

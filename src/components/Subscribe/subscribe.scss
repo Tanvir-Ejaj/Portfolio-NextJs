@@ -8,12 +8,19 @@
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     padding: 50px;
+    @include media-breakpoint-down(md){
+      padding: 20px;
+    }
     .subs-left {
       h3 {
         font-size: 48px;
         font-weight: 700;
         line-height: 60px;
         color: $white-color;
+        @include media-breakpoint-down(md){
+          font-size: 30px;
+          line-height: 45px;
+        }
       }
       p {
         padding-top: 16px;
@@ -22,6 +29,10 @@
         line-height: 30px;
         color: $white-color;
         width: 70%;
+        @include media-breakpoint-down(md){
+          font-size: 16px;
+          width: 100%;
+        }
       }
     }
     .subs-right {
@@ -34,6 +45,9 @@
       -moz-border-radius: 8px;
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
+      @include media-breakpoint-down(md){
+        margin-top: 40px;
+      }
       input {
         padding: 10px 18px;
         width: 75%;
