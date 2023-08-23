@@ -1,4 +1,8 @@
 .navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
   .navbar-nav {
     a {
       font-weight: 500;
@@ -29,5 +33,28 @@
     letter-spacing: 2px;
     outline: 0;
     border: 0;
+  }
+  &.stickynav{
+    background: #977ded !important;
+    animation: nav-ani linear 0.5s;
+    -webkit-animation: nav-ani linear 0.5s;
+    .navbar-nav{
+      a{
+        color: $white-color;
+        &:hover{
+          color: $black-color;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes nav-ani {
+  from{
+    top: -100px;
+  }
+  to{
+    top: 0;
   }
 }

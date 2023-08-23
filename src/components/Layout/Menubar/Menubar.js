@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -16,8 +16,22 @@ const DmSans = DM_Sans({
 });
 
 const Menubar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  },[]);
+
   return (
-    <Navbar expand="lg" className="py-3">
+    <Navbar expand="lg" className={showNavbar ? "stickynav" : " "}>
       <Container>
         <Link href="/">
           <Logo />
