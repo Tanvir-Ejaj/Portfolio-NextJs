@@ -34,14 +34,14 @@
     outline: 0;
     border: 0;
   }
-  &.stickynav{
+  &.stickynav {
     background: #977ded !important;
     animation: nav-ani linear 0.5s;
     -webkit-animation: nav-ani linear 0.5s;
-    .navbar-nav{
-      a{
+    .navbar-nav {
+      a {
         color: $white-color;
-        &:hover{
+        &:hover {
           color: $black-color;
         }
       }
@@ -49,12 +49,93 @@
   }
 }
 
-
 @keyframes nav-ani {
-  from{
+  from {
     top: -100px;
   }
-  to{
+  to {
     top: 0;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  .sidebar-inner {
+    .sidebar-bars {
+      svg {
+        font-size: 25px;
+        fill: $black-color;
+      }
+    }
+  }
+  .sidebar-links {
+    height: 100vh;
+    width: 100%;
+    background: $blue-color;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999999;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        a {
+          display: inline-block;
+          margin: 10px 0;
+          color: $white-color;
+          font-size: 20px;
+        }
+      }
+    }
+    .nav-btn {
+      margin-top: 20px;
+      padding: 14px 25px;
+      color: $blue-color;
+      background: $white-color;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      outline: 0;
+      border: 0;
+    }
+    .cross-btn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      svg {
+        font-size: 30px;
+        color: $white-color;
+      }
+    }
+  }
+  &.stickynav {
+    background: #977ded !important;
+    animation: nav-ani linear 0.5s;
+    -webkit-animation: nav-ani linear 0.5s;
+    .sidebar-bars {
+      svg {
+        fill: $white-color;
+      }
+    }
   }
 }

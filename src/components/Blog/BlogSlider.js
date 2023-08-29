@@ -80,6 +80,7 @@ const BlogSlider = () => {
                 duration: 0.2,
                 ease: "easeInOut",
               }}
+              key={i}
             >
               <Image
                 src={data.photo}

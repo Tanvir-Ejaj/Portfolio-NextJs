@@ -101,6 +101,7 @@ const About = () => {
                                 : "about-inner-text"
                             }
                             onClick={() => handleActive(i)}
+                            key={i}
                           >
                             <h3 className={DmSans.className} key={i}>
                               {data.heading}
